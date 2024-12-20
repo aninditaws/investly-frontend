@@ -38,7 +38,7 @@ const Dashboard = () => {
     const fetchRiskLevel = async () => {
       try {
         const response = await axios.get(
-          `https://investly-backend.vercel.app0/api/users/${userId}/`
+          `https://investly-backend.vercel.app/api/users/${userId}/`
         );
         setRiskLevel(response.data.risk_level); // Menyimpan level risiko dalam state
       } catch (error) {

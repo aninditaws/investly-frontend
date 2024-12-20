@@ -45,7 +45,7 @@ const RiskAssessment = () => {
   const changeRiskLevel = async () => {
     try {
       const response = await axios.post(
-        "https://investly-backend.vercel.app0/api/users/risklevel",
+        "https://investly-backend.vercel.app/api/users/risklevel",
         {
           id: userId,
           riskLevel: riskLevel,

@@ -10,7 +10,7 @@ const MarketData = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `https://investly-backend.vercel.app0/api/market-data/sector/${sector}`
+        `https://investly-backend.vercel.app/api/market-data/sector/${sector}`
       );
       setMarketData(response.data);
     };
