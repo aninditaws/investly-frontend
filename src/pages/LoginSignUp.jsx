@@ -23,7 +23,7 @@ const LoginSignUp = () => {
 
       try {
         const response = await axios.post(
-          "http://localhost:5000/api/users/login",
+          "https://investly-backend.vercel.app0/api/users/login",
           {
             name: emailOrUsername,
             email: emailOrUsername,
@@ -58,7 +58,7 @@ const LoginSignUp = () => {
 
       try {
         const response = await axios.post(
-          "http://localhost:5000/api/users/register",
+          "https://investly-backend.vercel.app0/api/users/register",
           {
             username,
             email,

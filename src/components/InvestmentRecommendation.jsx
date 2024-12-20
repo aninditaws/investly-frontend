@@ -15,7 +15,7 @@ const InvestmentRecommendation = ({ userId }) => {
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          `http://localhost:5000/api/recommendation/${userId}`,
+          `https://investly-backend.vercel.app/api/recommendation/${userId}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }

@@ -29,7 +29,7 @@ const Portfolio = () => {
     const fetchPortfolio = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/portfolio/${userId}`,
+          `https://investly-backend.vercel.app0/api/portfolio/${userId}`,
           axiosConfig
         );
         setPortfolio(response.data);
@@ -47,7 +47,7 @@ const Portfolio = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/portfolio/",
+        "https://investly-backend.vercel.app0/api/portfolio/",
         {
           userId, // Include userId in the request body
           ...formData,

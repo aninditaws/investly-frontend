@@ -23,7 +23,7 @@ const InvestmentCalculator = () => {
     try {
       // Fetch data from the backend
       const response = await axios.get(
-        "http://localhost:5000/api/market-data",
+        "https://investly-backend.vercel.app0/api/market-data",
         axiosConfig
       );
 
