@@ -59,7 +59,6 @@ const Portfolio = () => {
         `https://investly-backend.vercel.app/api/portfolio/${userId}`,
         axiosConfig
       );
-      setPortfolio(response.data);
 
       setPortfolio((prev) => [...prev, response.data[0]]); // Add new entry to portfolio
       setFormData({
