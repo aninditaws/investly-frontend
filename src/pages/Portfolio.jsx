@@ -46,7 +46,7 @@ const Portfolio = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
+      await axios.post(
         "https://investly-backend.vercel.app/api/portfolio/",
         {
           userId, // Include userId in the request body
@@ -54,6 +54,13 @@ const Portfolio = () => {
         },
         axiosConfig
       );
+
+      const response = await axios.get(
+        `https://investly-backend.vercel.app/api/portfolio/${userId}`,
+        axiosConfig
+      );
+      setPortfolio(response.data);
+
       setPortfolio((prev) => [...prev, response.data[0]]); // Add new entry to portfolio
       setFormData({
         assetType: "",
